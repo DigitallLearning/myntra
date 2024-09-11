@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes,Link } from 'react-router-dom';
 import Home from './Home';
 import Electronics from './Electronics';
 import Jwellery from './Jwellery';
@@ -14,22 +14,22 @@ function Routing() {
       <Navbar bg="primary" data-bs-theme="dark">
         <Container>
           
-          <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/mobile">Mobile</Nav.Link>
-            <Nav.Link href="/laptop">Laptop</Nav.Link>
-            <Nav.Link href="/electronics">Electronics</Nav.Link>
-            <Nav.Link href="/jwellery">Jewelery</Nav.Link>
-            <Nav.Link href="/man">Man Cloths</Nav.Link>
-            <Nav.Link href="/woman">Woman Cloths</Nav.Link>
-            <Nav.Link href="/help">Help</Nav.Link>
-            <Nav.Link > <button>Login</button></Nav.Link>
-            <Nav.Link > <button>Register</button></Nav.Link>
-          </Nav>
+         
+            <Link to="/">Home</Link>
+            <Link to="/mobile">Mobile</Link>
+            <Link to="/laptop">Laptop</Link>
+            <Link to="/electronics">Electronics</Link>
+            <Link to="/jwellery">Jewelery</Link>
+            <Link to="/man">Man Cloths</Link>
+            <Link to="/woman">Woman Cloths</Link>
+            <Link to="/help">Help</Link>
+            <Link > <button>Login</button></Link>
+            <Link > <button>Register</button></Link>
+         
         </Container>
       </Navbar>
      <Routes>
-      {/* <Route path='/' element={<Home></Home>}></Route> */}
+     
       <Route path='/' Component={Home}></Route>
       <Route path='/electronics' Component={Electronics}></Route>
       <Route path='/jwellery' Component={Jwellery}></Route>
